@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -7,19 +7,24 @@ const Container = styled.div`
   padding: 16px;
 `
 
-class Table extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+const Table = () => {
+  const [data, setData] = useState()
 
-  render() {
-    return (
-      <Container>
-        I'm not a table yet, pls fix me
-      </Container>
-    );
-  }
+  useEffect(() => {
+
+    fetch('https://swapi.dev/api/people', { method: 'GET' })
+      .then(response => response.json())
+      .then(({ results }) => setData(results))
+
+  }, [])
+
+  console.log(data)
+
+  return (
+    <Container>
+      <div>Hello</div>
+    </Container>
+  )
 }
 
 export default Table;
