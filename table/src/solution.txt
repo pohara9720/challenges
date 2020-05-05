@@ -1,0 +1,2 @@
+1) I had to update react scripts to allow hooks as the react version being used was pretty outdated
+2) The api provided seems to not exist. I had to use https://swapi.dev/api/ which seems to return similar results.
