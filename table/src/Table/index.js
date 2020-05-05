@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import styled, { createGlobalStyle } from 'styled-components';
+import styled from 'styled-components';
 import ArrowUpIcon from './ArrowUpIcon'
 import ArrowDownIcon from './ArrowDownIcon'
 
@@ -72,7 +72,7 @@ export const Table = ({ data, children }) => {
   useEffect(() => {
     const sorted = sortByKey(sortOption, sortedData)
     setSortedData(sorted)
-  }, [sortOption.key, sortOption.asc, sortedData])
+  }, [sortOption, sortedData])
 
   return (
     <Container>

@@ -1,2 +1,4 @@
 1) I had to update react scripts to allow hooks as the react version being used was pretty outdated
 2) The api provided seems to not exist. I had to use https://swapi.dev/api/ which seems to return similar results.
+3) Time permitting I would have liked to add more tests with the component itself and iron out some issues with the sorting functionality. 
+4) I would have also liked to fix the proptype errors or if I had more time convert to TypeScript
